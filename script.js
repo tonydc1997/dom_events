@@ -2,11 +2,19 @@ var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
 
-// var li = document.querySelectorAll("li");
+
 
 // 1. If you click on a list item it toggles the class on and off 
   // target/cache list items
-  // add 'toggle' class to all list items (even new ones)
+  
+  // add 'done' class to all list items (even new ones)
+  ul.addEventListener("click", function(event) {
+    var li = document.querySelectorAll("li");
+    for (var i=0; i < li.length; i++) {
+      li[i].classList.toggle("done");
+    };
+  });
+  
   // add 'click' event listener to li
 
 // 2. Add buttons next to each list item to delete the item when clicked on its corresponding delete button.
@@ -82,6 +90,6 @@ button.addEventListener("click", addListAfterClick);
 
 input.addEventListener("keypress", addListAfterKeypress);
 
-// li.addEventListener("click", function() {
+
 
 // });
