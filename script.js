@@ -5,10 +5,10 @@ var ul = document.querySelector("ul");
 
 
 // 1. If you click on a list item it toggles the class on and off 
-  ul.addEventListener("click", (event) => {
+function toggleLineThrough(event) {
     const li = event.target;
     li.classList.toggle("done");
-  });
+  };
     
 
 // 2. Add buttons next to each list item to delete the item when clicked on its corresponding delete button.
@@ -16,6 +16,12 @@ var ul = document.querySelector("ul");
   // create delete feature
   function remove() {
     ul.removeChild(li);
+  }
+
+  function createDeleteButton() {
+    var deleteButton = document.createElement("button");
+    deleteButton.appendChild(document.createTextNode("Delete"));
+    ul.appendChild(deleteButton);
   }
   // Append delete button to list item
   
@@ -34,11 +40,7 @@ function createListElement() {
 	input.value = "";
 }
 
-function createDeleteButton() {
-  var deleteButton = document.createElement("button");
-  deleteButton.appendChild(document.createTextNode("Delete"));
-  ul.appendChild(deleteButton);
-}
+
 
 //////////////////////// Steal some ideas from this code   /////////////////////////////////////////////
 function createLi(text) {
@@ -84,6 +86,6 @@ button.addEventListener("click", addListAfterClick);
 
 input.addEventListener("keypress", addListAfterKeypress);
 
-
+ul.addEventListener("click", toggleLineThrough);
 
 // });
