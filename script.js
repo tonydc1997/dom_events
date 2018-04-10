@@ -1,6 +1,7 @@
 var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
+var li = document.querySelectorAll("li");
 
 function inputLength() {
 	return input.value.length;
@@ -25,6 +26,14 @@ function addListAfterKeypress(event) {
 	}
 }
 
+function toggleLineThrough() {
+  if (li.classList.length > 0) {
+
+  }
+}
+
 button.addEventListener("click", addListAfterClick);
 
 input.addEventListener("keypress", addListAfterKeypress);
+
+li.addEventListener("click", );
