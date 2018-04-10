@@ -5,17 +5,11 @@ var ul = document.querySelector("ul");
 
 
 // 1. If you click on a list item it toggles the class on and off 
-  // target/cache list items
-  
-  // add 'done' class to all list items (even new ones)
-  ul.addEventListener("click", function(event) {
-    var li = document.querySelectorAll("li");
-    for (var i=0; i < li.length; i++) {
-      li[i].classList.toggle("done");
-    };
+  ul.addEventListener("click", (event) => {
+    const li = event.target;
+    li.classList.toggle("done");
   });
-  
-  // add 'click' event listener to li
+    
 
 // 2. Add buttons next to each list item to delete the item when clicked on its corresponding delete button.
   //Create delete button 
